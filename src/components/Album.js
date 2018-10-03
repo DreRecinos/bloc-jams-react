@@ -120,6 +120,12 @@ class Album extends Component {
    return formattedTime;
 }
 
+handleVolumeChange(e) {
+ const newVolume = e.target.value;
+ this.audioElement.volume = newVolume;
+ this.setState({ volume: newVolume });
+}
+
   render() {
     return (
       <section className="album">
@@ -164,6 +170,7 @@ class Album extends Component {
            handleNextClick={() => this.handleNextClick()}
            handleTimeChange={(e) => this.handleTimeChange(e)}
            formatTime={ (time) => this.formatTime(time)}
+           handleVolumeChange={(e) => this.handleVolumeChange(e)}
          />
       </section>
     );

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Row, Col } from 'react-bootstrap';
+import '.././components/Landing.css';
 
 const Landing = () => (
     <section className="landing">
@@ -22,4 +24,4 @@ const Landing = () => (
     </section>
 );
 
-export default Landing; 
+export default Landing;
